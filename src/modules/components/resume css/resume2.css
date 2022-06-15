@@ -1,0 +1,203 @@
+:root{
+    --Theme-Color:rgb(69, 6, 69);
+    /* use diffrent font for fname*/
+    --Name-Heading-Font: fangsong;
+    --Name-Subheading-Font: fangsong;
+
+    /* font */
+    --Para-Font-Size:1rem;
+    --Macro-Font-Size:1.03rem;
+    --Mini-Font-Size:0.9rem;
+}
+
+    .resume-border-rs-two{
+    margin: auto;
+    height: 11.69in;
+    width: 8.27in;
+        background-color: white;
+        /* display: flex;  */
+        display:grid;
+        grid-template-rows: auto                     ;
+        grid-template-columns: 1fr;
+    }
+
+    .resume-inner-wrap-rs-two{
+        margin-right:2%;
+        margin-left:auto;
+        margin-top:1.8%;
+        height:90%;
+        width:94%;
+        display: flex;
+        flex-direction: column;
+    }
+    /* heading name and logo*/
+    .resume-div-name-rs-two{
+        height:fit-content;
+        width:100%;
+        /* margin-top: 5%; */
+    }
+    .resume-section-name-contact-rs-one{
+        height:fit-content;
+        width:100%;
+
+    }
+    .name-logo-wrap-rs-two{
+        height:fit-content;
+        width:80%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+    /* logo initials*/
+        .outer-wrap-logo-rs-two{
+            height:100px;
+            width:100px;
+            border: solid var(--Theme-Color) 1px;
+            border-radius: 50px;
+            display: flex;
+            /* margin-left:10%; */
+        }
+        .inner-wrap-logo-rs-two{
+        height:90%;
+        width:90%;
+        background-color: var(--Theme-Color);
+        border-radius: 50%;
+        margin: auto;
+        display: flex;
+        }
+        .logo-initials-head-rs-two{
+            width:fit-content;
+            height:fit-content;
+            font-size: 3rem;
+            color:white;
+            font-family: var(--Name-Heading-Font);
+            font-weight: 300;
+            margin:auto auto auto auto !important;
+        }
+    /* end logo initials*/
+
+    .section-name-part-name-rs-two{
+        height:100%;
+        margin:auto auto auto 8%;
+
+       
+    }
+    .bold-fname-head-rs-two{
+        
+    }
+    .section-name-heading-rs-one{
+      
+        font-family: var(--Name-Heading-Font);
+        font-size: 2.7rem;
+        font-weight: 300;
+        font-stretch: condensed;
+        color:var(--Theme-Color)
+    }
+    .section-name-subheading-rs-one{
+        color:var(--Theme-Color);
+        font-family: var(--Name-Subheading-Font);
+    }
+/* end heading name and logo*/
+/*other */
+/*personal summary*/
+.other-summary-wrap-rs-two{
+    height:auto;
+    width: 95%;
+    margin-top: 2.5%;
+}
+.other-minor-head-rs-two{
+    font-size: 1.2rem;
+    font-stretch: ultra-expanded;
+    font-family: var(--Name-Subheading-Font);
+    color:var(--Theme-Color);
+    font-weight: 600;
+
+}
+.para-wrapper-rs-two{
+    width:98%;
+}
+.other-para-rs-two{
+    font-family: var(--Name-Subheading-Font);
+    font-size: var(--Para-Font-Size)
+}
+/* end personal summary*/
+
+.grid-other-wrapper-rs-two{
+    height:100%;
+    display: grid;
+    /* margin-top:3%; */
+    grid-template-columns: 0.6fr 1fr;
+}
+.other-grid-item-1-rs-two{
+    grid-row: 1;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top:5%;
+}
+.other-grid-item-2-rs-two{
+    grid-row:1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    margin-top:1%;
+}
+.wrap-grid-item-rs-two{
+    height:auto;
+    width:auto;
+    display: flex;
+    flex-direction: column;
+    margin-top:1%;
+}
+.wrap-grid-item-rs-sp-two{
+    /* margin-top:10.5%; */
+}
+    /*contact others*/
+    .li-wrap-rs-two{
+        height:fit-content;
+        width:90%;
+    }
+    .other-contact-li-rs-two{
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+        flex-direction: row;
+        text-decoration: none;
+        list-style: none;
+        font-family: var(--Name-Subheading-Font);
+        font-size: var(--Para-Font-Size);
+    }
+/*grid two*/
+.div-wrap-rs-two{
+
+}
+.other-macro-head-rs-two{
+    font-size: var(--Macro-Font-Size);
+    font-weight: 600;
+    font-stretch: ultra-expanded;
+}
+.other-mini-head-rs-two{
+    font-size:var(--Mini-Font-Size);
+    font-stretch: ultra-expanded;
+}
+.other-comp-wrap-rs-two{
+    height:auto;
+    width:fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top:1.2%;
+}
+p{
+    margin-bottom: 0.1rem !important;
+}
+.other-contact-sp-media{
+    width:90%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.icon-rs-2{
+    margin-right: 3%;
+}
+.para-wrap-rs-two{}
+.para-rs-two{}
