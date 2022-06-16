@@ -58,9 +58,9 @@ const Summary=(props)=>{
     return(
 
         elemVal != undefined && elemVal.length >0  ?
-        <div class="resume-comp-rs4">
-            <h3 style={styles.SubHeading} class="subheading-rs4 brColor cl-theme fs-subhead">SUMMARY</h3>
-            <p style={styles.Para} class="para-rs4 summary-para-rs4 fs-para">  {elemVal[0][0].val}</p>
+        <div className="resume-comp-rs4">
+            <h3 style={styles.SubHeading} className="subheading-rs4 brColor cl-theme fs-subhead">SUMMARY</h3>
+            <p style={styles.Para}  className="para-rs4 summary-para-rs4 fs-para">  {elemVal[0][0].val}</p>
         </div>
 
        :''
@@ -81,10 +81,10 @@ const Experience =(props)=>{
                 let expArray = getRes(elemVal[index])
 
                 return(
-                    <div key={uuid()} class="single-block-rs4">
-                            <h5  style={styles.MinorHeading} class="major-head-rs4 fs-minorhead">{expArray.head}</h5>
-                            <div class="company-name-date-wrap"><h6  style={styles.MinorSubHeading}  class="minor-heading-rs4 res4-CNex fs-minorsubhead">{expArray.Employer}</h6><h6 class="minor-heading-rs4 res4-tEx fs-minorsubhead">{expArray['Start Date']+'-' + expArray['End Date'] }</h6></div>
-                            <p onClick={()=>innerWidth < 1200 ?setCurSelected('fs-para'):""}  style={styles.Para}   class='para-rs4 exp-para fs-para'>{parse(workSummary(expArray.Summary))}</p>
+                    <div key={uuid()} className="single-block-rs4">
+                            <h5  style={styles.MinorHeading} className="major-head-rs4 fs-minorhead">{expArray.head}</h5>
+                            <div className="company-name-date-wrap"><h6  style={styles.MinorSubHeading}  className="minor-heading-rs4 res4-CNex fs-minorsubhead">{expArray.Employer}</h6><h6 className="minor-heading-rs4 res4-tEx fs-minorsubhead">{expArray['Start Date']+'-' + expArray['End Date'] }</h6></div>
+                            <p onClick={()=>innerWidth < 1200 ?setCurSelected('fs-para'):""}  style={styles.Para}   className='para-rs4 exp-para fs-para'>{parse(workSummary(expArray.Summary))}</p>
                         </div>
                     )}
                     
@@ -105,7 +105,7 @@ const Education=(props)=>{
         { elemVal.map((i,index)=>{
                     let eduArray = getRes(elemVal[index])
                     return(
-                        <div key={uuid()} class="single-block-rs4">
+                        <div key={uuid()} className="single-block-rs4">
                             <h5 style={styles.MinorSubHeading} className="minor-head-rs4 fs-minorsubhead">{eduArray.Course}</h5>
                             <p style={styles.Para} className="para-rs4 fs-para">{eduArray['School Name']}</p>
                             <p style={styles.Para} className='para-rs4 fs-para'>{eduArray['Start Date'] +' - '+eduArray['End Date']}</p>
@@ -145,16 +145,16 @@ const Contact=(props)=>{
 
     return(
          elemVal != undefined && elemVal.length >0?
-         <div class="resume-comp-rs4 ">
-         <h3 style={styles.SubHeading} class="subheading-rs4 cl-theme brColor fs-subhead">CONTACT</h3>
-         <div class="listclass-rs4">
-         {elemVal[0].map(i=>i.name == 'Phone Number' ?<div class="contact-li-wrap">
-            <li style={styles.Para} class="li-contact-rs4 fs-para"><div className='icon-wrapper-r4 trackForChangeColor cl-theme'><GetIcon  props={['Phone',myIconStyle]} /></div>{i.val}</li></div>:i.name== 'Email'? <div class="contact-li-wrap">
+         <div className="resume-comp-rs4 ">
+         <h3 style={styles.SubHeading} className="subheading-rs4 cl-theme brColor fs-subhead">CONTACT</h3>
+         <div className="listclass-rs4">
+         {elemVal[0].map(i=>i.name == 'Phone Number' ?<div className="contact-li-wrap">
+            <li style={styles.Para} className="li-contact-rs4 fs-para"><div className='icon-wrapper-r4 trackForChangeColor cl-theme'><GetIcon  props={['Phone',myIconStyle]} /></div>{i.val}</li></div>:i.name== 'Email'? <div className="contact-li-wrap">
             
-            <li style={styles.Para} class="li-contact-rs4 fs-para"><div className='icon-wrapper-r4 trackForChangeColor cl-theme'><GetIcon props={['Email',myIconStyle]} /></div>{i.val}</li></div>: '' )}
+            <li style={styles.Para} className="li-contact-rs4 fs-para"><div className='icon-wrapper-r4 trackForChangeColor cl-theme'><GetIcon props={['Email',myIconStyle]} /></div>{i.val}</li></div>: '' )}
          {stateMedia.length > 0?
             stateMedia.map(i=>{
-                return <div class="contact-li-wrap"> <li style={styles.Para} class="li-contact-rs4 fs-para"><div className='icon-wrapper-r4 trackForChangeColor cl-theme'><GetIcon props={[i.icon,myIconStyle]} /></div>{"  "}<p className='contact-p'>{i.value}</p></li></div>
+                return <div className="contact-li-wrap"> <li style={styles.Para} className="li-contact-rs4 fs-para"><div className='icon-wrapper-r4 trackForChangeColor cl-theme'><GetIcon props={[i.icon,myIconStyle]} /></div>{"  "}<p className='contact-p'>{i.value}</p></li></div>
              }):
          ''}
          </div> 
@@ -251,9 +251,9 @@ const Res4=()=>{
         <div id='resume' className="resume-border-rs-four">
 
             {/* <!-- side 1 --> */}
-            <div class="resume-inner-wrap-rs-four">
-            <div class="resume-main-flex-1-rs4 cl-theme brColor">
-                <div class="resume-main-flex-1-inner-wrap">
+            <div className="resume-inner-wrap-rs-four">
+            <div className="resume-main-flex-1-rs4 cl-theme brColor">
+                <div className="resume-main-flex-1-inner-wrap">
                           {/* <!-- Image --> */}
                    <Image props={{elemVal:Resume.Personal}}/>
                     {/* <!-- /Image --> */}
@@ -273,7 +273,7 @@ const Res4=()=>{
             {/* <!-- side 2 --> */}
 
         </div>
-        <div class="resume-main-flex-2-rs4">
+        <div className="resume-main-flex-2-rs4">
                     {/* <!-- name --> */}
                         <Name props={{statePersonal:Resume.Personal,styles:styles,temp:temp,designation:designation}}/>
                     {/* <!-- /name --> */}

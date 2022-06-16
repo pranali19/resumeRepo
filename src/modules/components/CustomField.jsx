@@ -489,9 +489,9 @@ export const SingleToggleViewReturn=(props)=>{
             <div className="form-check display-form-check">
                 {props[0].btnLabels.map((i,index)=>{
                    return(
-                    <div>
-                        <input class="form-check-input" type="radio" name={props[0].name} id={props[0].id} onClick={()=>{props[0].onClickFunc[index](funcParam(index))}} defaultChecked={index === 0?true:false}/>
-                        <label class="form-check-label" htmlFor={props[0].id}> {i} </label>
+                    <div key={props[0].name+String(index)}>
+                        <input className="form-check-input" type="radio" name={props[0].name} id={props[0].id} onClick={()=>{props[0].onClickFunc[index](funcParam(index))}} defaultChecked={index === 0?true:false}/>
+                        <label className="form-check-label" htmlFor={props[0].id}> {i} </label>
                     </div>
                    )})}
                 </div>

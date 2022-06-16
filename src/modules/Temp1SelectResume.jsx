@@ -58,7 +58,7 @@ class SelectTemp extends React.Component{
                       )})}
                 </div>
                 <div className='btn-wrap-form'>
-                     <button type="button" className='btn-form'  name="next" onClick={()=>this.onClickNextSetTemp(this.onClickNext.bind(this))}> next</button>             
+                     <button type="button" className='btn btn-form'  name="next" onClick={()=>this.onClickNextSetTemp(this.onClickNext.bind(this))}> next</button>             
                 </div>
                 </div>   
             )

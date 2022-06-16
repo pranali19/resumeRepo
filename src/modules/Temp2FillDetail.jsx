@@ -21,8 +21,8 @@ class FillDetails extends React.Component{
                 <Input2  />
             </div>
             <div className='btn-wrap-form'>      
-                    <button type="button" className='btn-form'  name="prev" onClick={this.onClickPrev.bind(this)}>prev</button>
-                   <button type="button" className='btn-form'  name="next" onClick={this.onClickNext.bind(this)}> next</button>      
+                    <button type="button" className='btn btn-form'  name="prev" onClick={this.onClickPrev.bind(this)}>prev</button>
+                   <button type="button" className='btn btn-form'  name="next" onClick={this.onClickNext.bind(this)}> next</button>      
             </div>
             </div>   
         )
