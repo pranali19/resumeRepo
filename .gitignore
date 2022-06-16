@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/src/modules/component/unusedForNow
 /.pnp
 .pnp.js
 
