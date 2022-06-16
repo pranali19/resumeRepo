@@ -83,7 +83,11 @@ const Experience =(props)=>{
                 return(
                     <div key={uuid()} className="single-block-rs4">
                             <h5  style={styles.MinorHeading} className="major-head-rs4 fs-minorhead">{expArray.head}</h5>
-                            <div className="company-name-date-wrap"><h6  style={styles.MinorSubHeading}  className="minor-heading-rs4 res4-CNex fs-minorsubhead">{expArray.Employer}</h6><h6 className="minor-heading-rs4 res4-tEx fs-minorsubhead">{expArray['Start Date']+'-' + expArray['End Date'] }</h6></div>
+                            {expArray.head=="Project"?<h6 className="minor-heading-rs4 res4-tEx fs-minorsubhead">{expArray["Project URL"]?"Url: "+expArray["Project URL"] :''}</h6>:''}
+
+                            <div className="company-name-date-wrap">
+                            {expArray.Employer?<h6  style={styles.MinorSubHeading}  className="minor-heading-rs4 res4-CNex fs-minorsubhead">{expArray.Employer}</h6>:''}
+                            <h6 className="minor-heading-rs4 res4-tEx fs-minorsubhead">{expArray['Start Date']+'-' + expArray['End Date'] }</h6></div>
                             <p onClick={()=>innerWidth < 1200 ?setCurSelected('fs-para'):""}  style={styles.Para}   className='para-rs4 exp-para fs-para'>{parse(workSummary(expArray.Summary))}</p>
                         </div>
                     )}

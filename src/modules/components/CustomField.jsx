@@ -118,10 +118,16 @@ export const SingleInpReturn = (props) => {
     const dispatch = useDispatch()
     const [colorThemes,setColorThemes ]=  useContext(ColorContext)
 
-    const [temp,personal] = useSelector(state=>[state.setTemp.template,state.setResume.Personal])
-    if (personal !== undefined  && personal.length > 0){
-    placeholder =  'Your Designation'}
-
+    const [temp,personal,designation] = useSelector(state=>[state.setTemp.template,state.setResume.Personal,state.setDesignation])
+    placeholder =  'Your Designation'
+    const getDefaultValue =(dataCl)=>{
+        if(dataCl === 'cl-theme'){
+            return colorThemes[temp]
+        }
+        else if (dataCl === 'add-sub'){
+            return designation
+        }
+    }
     const onMouseLeaveEvent=(dataCl,e)=>{
         onMouseLeave(dataCl)
         if(dataCl === 'cl-theme'){
@@ -136,7 +142,7 @@ export const SingleInpReturn = (props) => {
         <div className='cf-single-input-wrap' key={uuid()}>
             <label className='cf-input-label'> 
             {val.label}
-            <input placeholder={placeholder} id={val.name} onMouseOver={ ()=>onMouseIn( val.dataCl) } onMouseLeave={(e) => { onMouseLeaveEvent(val.dataCl,e) }} name={val.name} className={'form-control ' + val.className} type={val.type} onChange={(e) => { val.onChangeFunc(e, val.dataCl) }}  />
+            <input placeholder={placeholder} defaultValue={getDefaultValue(val.dataCl)} id={val.name} onMouseOver={ ()=>onMouseIn( val.dataCl) } onMouseLeave={(e) => { onMouseLeaveEvent(val.dataCl,e) }} name={val.name} className={'form-control ' + val.className} type={val.type} onChange={(e) => { val.onChangeFunc(e, val.dataCl) }}  />
             </label>
         </div>
     )

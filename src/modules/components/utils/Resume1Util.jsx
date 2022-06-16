@@ -48,12 +48,14 @@ export const SubheadParaExperience =(props)=>{
     const SingleSHPara = (props)=>{
         let newArr ={}
         props.props.i.map(val=>newArr[val.name] = val.val)
-        const h5str = newArr.Title +' --'+ newArr.Employer +" "+[newArr.City!=undefined?newArr.City:''] +['--'+newArr.new != undefined? newArr.new:'']
+        const h5str = newArr.Title + [' --'+newArr.Employer?newArr.Employer:''] +" "+[newArr.City!=undefined?newArr.City:''] +['--'+newArr.new != undefined? newArr.new:'']
         
         return(
             <div className="others-one-minor-div-section-rs-one xp-para">
                 <h4 style={{...styles.MinorHeading,textDecoration:'Underline'}} className="grid-other-macro-head-rs-one fs-minorsubhead">{newArr.head != undefined?newArr.head:''}</h4>
                 <h5  style={styles.MinorSubHeading} className="grid-other-mini-head-rs-one fs-para">{ h5str}</h5>
+                {newArr.head =="Project"?<h6 style={styles.Para} className="grid-other-mini-head-rs-one h6-head-rs-one fs-para">{newArr['Project URL']?"Url: "+newArr['Project URL']:''}</h6>:""}
+
                 <h6 style={styles.Para} className="grid-other-mini-head-rs-one h6-head-rs-one fs-para">{'From : '+newArr['Start Date']+ ' - '+newArr['End Date']}</h6>
                 <div onClick={()=>innerWidth < 1200?setCurSelected('fs-para'):''}  className="para-rapper-rs-one fs-para"><div style={styles.Para} className="grid-other-para-rs-one fs-para">{parse(workSummary(newArr.Summary))} </div></div>
             </div>

@@ -125,7 +125,9 @@ const Experience =(props)=>{
 
             return (
                 <div key={uuid()} className="other-comp-wrap-rs-two">
-                    <h4 style={styles.MinorHeading} className="other-macro-head-rs-two fs-minorhead">{curvalArr.Title+ ' at '+curvalArr.Employer}</h4>
+                    <h4 style={styles.MinorHeading} className="other-macro-head-rs-two fs-minorhead">{curvalArr.Title } {curvalArr.Employer? ' at '+curvalArr.Employer:''}</h4>
+                    {curvalArr.Title?<h5 style={styles.MinorSubHeading} className="other-mini-head-rs-two fs-para">{curvalArr['Project URL']?"Url: "+curvalArr['Project URL']:''}</h5>:''}
+
                     <h5 style={styles.MinorSubHeading} className="other-mini-head-rs-two fs-para">{"year :"+curvalArr['Start Date']+' - '+curvalArr['End Date']}</h5>
                 <div onClick={()=>innerWidth < 1200 ?setCurSelected('fs-para'):''}  className="para-wrap-rs-two"><p style={styles.Para} className="other-para-rs-two fs-para">{parse(workSummary(curvalArr.Summary))}</p></div>
                 </div>

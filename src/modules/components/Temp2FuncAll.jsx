@@ -69,7 +69,7 @@ export const WorkExperience=()=>{
     const ShowInputs={
         'Work Exprience':[{name:'Title',label:'Job Title *',type:'text'},{name:'Employer',label:'Employer/Company Name *',type:'text'},{name:'City',label:'City ',type:'text'},{name:'Start Date',label:'Start Date (Mmm/YY) *',type:'text'},{name:'End Date',label:'End Date (Mmm/YY) *',type:'text'},{name:'Summary',label:'Work Summary *',type:'textarea'}],
         'Internship':[{name:'Title',label:'Job Title *',type:'text'},{name:'Employer',label:'Employer/Company Name *',type:'text'},{name:'City',label:'City ',type:'text'},{name:'Start Date',label:'Start Date (Mmm/YY) *',type:'text'},{name:'End Date',label:'End Date  (Mmm/YY) *',type:'text'},{name:'Summary',label:'Internship Summary *',type:'textarea'}] ,
-        'Project':[{name:'Title',label:'Project Name *',type:'text'},,{name:'Start Date ',label:'Start Date (Mmm/YY) *',type:'text'},{name:'End Date',label:'End Date (Mmm/YY) *',type:'text'},{name:'Project URL',label:'Project URL',type:'text'},{name:'Summary',label:'Project Summary *',type:'textarea'}] ,
+        'Project':[{name:'Title',label:'Project Name *',type:'text'},,{name:'Start Date',label:'Start Date (Mmm/YY) *',type:'text'},{name:'End Date',label:'End Date (Mmm/YY) *',type:'text'},{name:'Project URL',label:'Project URL',type:'text'},{name:'Summary',label:'Project Summary *',type:'textarea'}] ,
         'Freelancing Experience':[{name:'Title',label:'Project Name *',type:'text'},{name:'Employer',label:'Employer/Company Name *',type:'text'},{name:'Start Date',label:'Start Date (Mmm/YY) *',type:'text'},{name:'End Date',label:'End Date (Mmm/YY)*',type:'text'},{name:'Project URL',label:'Project URL',type:'text'},{name:'Summary',label:'Freelance Summary *',type:'textarea'}] 
     }
     
@@ -179,7 +179,7 @@ const GetDisabledInputReturn2=(props)=>{
         <div className="get-disabled-input-record-2-wrap" style={props[2]=="Personal"? {flexDirection: 'row',flexWrap: 'wrap'}:{}} id={props[1]}>
         {inpArray.map((i,indx)=>{
             if(i.name=='Summary'){
-                return  <div className='form-group text-record-sum form-group-s' key={i.name+String(indx)}><label className='label-nb'><p name={i.name} className='label-para-class'>{i.name} </p><textarea name={i.name} className="inp-class-fd  form-control" defaultValue={i.val} disabled={true}></textarea></label></div>    
+                return  <div className='form-group text-record-sum form-group-s'   key={i.name+String(indx)}><label className='label-nb'><p name={i.name} className='label-para-class'>{i.name} </p><textarea name={i.name} className="inp-class-fd  form-control" defaultValue={i.val} style={{height:'10vh',width:'20vw'}} disabled={true}></textarea></label></div>    
             }
             else if(i.name == 'id'){
                 return ''

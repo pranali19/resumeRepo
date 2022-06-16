@@ -83,7 +83,8 @@ const Experience =(props)=>{
                 return(
                     <div className="comp-div-rs-three" key={uuid()}>
                         <h4 style={styles.MinorHeading} className="marco-head-rs-three fs-minorHead">{expArray.head}</h4>
-                        <h5 style={styles.MinorSubHeading} className='sp-head-rs-three fs-minorsubhead'>{expArray.Title +' | '+ expArray.Employer}</h5>
+                        <h5 style={styles.MinorSubHeading} className='sp-head-rs-three fs-minorsubhead'>{expArray.Title +' | '} { expArray.Employer?expArray.Employer:''}</h5>
+                        {expArray.head == "Project"?<h6 style={styles.Para} className="mini-head-rs-three fs-para ">{expArray['Project URL']?"Url: "+expArray['Project URL']:''} </h6>:''}
                         <h6 style={styles.Para} className="mini-head-rs-three fs-para ">{expArray['Start Date']+'-' + expArray['End Date'] } </h6>
                         <p onClick={()=>innerWidth < 1200 ?setCurSelected('fs-para'):''}  style={styles.Para} className="para-rs-three fs-para">{parse(workSummary(expArray.Summary))}</p>
                     </div>
@@ -108,9 +109,9 @@ const Education=(props)=>{
                     let eduArray = getRes(elemVal[index])
                     
                     return(
-                    <div className="comp-div-rs-three" key={uuid()}>
+                    <div className="comp-div-rs-three my-1" key={uuid()}>
                         <h4 style={styles.MinorSubHeading} className="sp-head-rs-three fs-minorsubhead">{eduArray.Course + ' ('+ eduArray['Start Date'] +' - '+eduArray['End Date'] +') '}</h4>
-                        <p style={styles.MinorSubHeading} className="sp-head-rs-three fs-minorsubhead">{eduArray['School Name']}</p>
+                        <p style={styles.Para} className="para-rs-three fs-para">{eduArray['School Name']}</p>
                         {eduArray['Marks Obtained']?<p style={styles.Para} className="para-rs-three fs-para">{'Aggregate: '+eduArray['Marks Obtained']}</p>:''}
                     </div>
                     )
@@ -162,8 +163,8 @@ const Contact=(props)=>{
                     <div className="minor-head-wrap-rs-three cl-theme trackForChangeColor fs-subhead"><h2 style={styles.SubHeading} className="comp-minor-heading-rs-three fs-subhead cl-theme trackForChangeColor">Contact</h2></div>
                     <div className="comp-div-rs-three">
                     {elemVal[0].map(i=>
-                    i.name == 'Email'?<li style={styles.Para} className="li-rs-three-sp-media para-rs-three fs-para"><div style={{marginTop:'auto',marginBottom:'auto'}}><GetIcon props={['Email',]} /></div>{i.val}</li>:
-                    i.name== 'Phone Number'?<li style={styles.Para} className="li-rs-three-sp-media para-rs-three fs-para"><div style={{marginTop:'auto',marginBottom:'auto'}}><GetIcon props={['Phone',]} /></div>{i.val}</li> : '' )}
+                    i.name == 'Email'?<li style={styles.Para} className="li-rs-three-sp-media para-rs-three fs-para"><div style={{marginTop:'auto',marginBottom:'auto'}}><GetIcon props={['Email',]} /></div>{" "+i.val}</li>:
+                    i.name== 'Phone Number'?<li style={styles.Para} className="li-rs-three-sp-media para-rs-three fs-para"><div style={{marginTop:'auto',marginBottom:'auto'}}><GetIcon props={['Phone',]} /></div>{" "+i.val}</li> : '' )}
                     {stateMedia.map(i=>{
                 return <li style={styles.Para} className="li-rs-three-sp-media para-rs-three fs-para" key={'id'+i.key}><div style={{marginTop:'auto',marginBottom:'auto'}}><GetIcon props={[i.icon,'']} /></div>{"  "}{i.value}</li>
                      })}
