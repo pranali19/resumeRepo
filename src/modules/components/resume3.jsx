@@ -111,7 +111,7 @@ const Education=(props)=>{
                     <div className="comp-div-rs-three" key={uuid()}>
                         <h4 style={styles.MinorSubHeading} className="sp-head-rs-three fs-minorsubhead">{eduArray.Course + ' ('+ eduArray['Start Date'] +' - '+eduArray['End Date'] +') '}</h4>
                         <p style={styles.MinorSubHeading} className="sp-head-rs-three fs-minorsubhead">{eduArray['School Name']}</p>
-                        <p style={styles.Para} className="para-rs-three fs-para">{'cgpa: '+eduArray['Marks Obtained']}</p>
+                        {eduArray['Marks Obtained']?<p style={styles.Para} className="para-rs-three fs-para">{'Aggregate: '+eduArray['Marks Obtained']}</p>:''}
                     </div>
                     )
 

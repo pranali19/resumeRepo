@@ -78,7 +78,7 @@ export const SubheadParaEducation=(props)=>{
         return(
             <div class="others-one-minor-div-section-rs-one">
             <h4 style={styles.MinorHeading} class="grid-other-macro-head-rs-one fs-minorsubhead">{newArr.Course + ' '+'('+newArr['School Name']+')'} </h4>
-            <h5 style={styles.Para} class="grid-other-mini-head-rs-one fs-para">{'cgpa : '+newArr['Marks Obtained']}</h5>
+            {newArr['Marks Obtained']?<h5 style={styles.Para} class="grid-other-mini-head-rs-one fs-para">{'Aggregate : '+newArr['Marks Obtained']}</h5>:''}
             <h5 style={styles.Para} class="grid-other-mini-head-rs-one fs-para">{'year : '+newArr['Start Date'] + ' '+ newArr['End Date']}</h5>  
         </div>
         )

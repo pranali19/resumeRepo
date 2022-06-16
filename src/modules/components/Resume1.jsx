@@ -17,6 +17,7 @@ import {HeadingPara,
 import ColorContext from "./utils/ColorContext";
 
 
+
 const NameContact =(props)=>{
     const {styles,designation} = props.props
     const [stateMedia ,statePersonal ] = useSelector(state=>[state.setSocialMedia, state.setResume.Personal])

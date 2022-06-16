@@ -459,7 +459,7 @@ export const SingleRadioReturn = (props) => {
             <div className='radio-custom-add-section-wrap' id='radio-btn-custom-section'>
                 {RadioBtn.map(btn => {
                     return (
-                        <div className='single-wrap-add-section' >
+                        <div key={uuid()} className='single-wrap-add-section' >
                             <input className="form-check-input" value={btn.name} type="radio" onClick={() => { setRadioVal(btn.name) }} id={btn.id} name="radioVal" defaultChecked={btn.name === radioVal?true:false}></input>
                             <label className="form-check-label custom-label-add-section" htmlFor={btn.id}>{btn.name}</label>
                         </div>
