@@ -1031,33 +1031,87 @@
     flex-direction: column;
     position: relative;
     background-color: transparent;
+    -ms-transform: translateX(-50%) scale(80% , 75%) ;
+    -webkit-transform: translateX(-50%) scale(80% , 75%) ;
     transform: translateX(-50%) scale(80% , 75%);
     left:50%;
     /* top:-10vh; */
 }
 /* scaled Resume */
-    @media screen and (max-width:1200px) {.scaledResume{transform: translateX(-50%) scale(80% , 90%);}
-    @media screen and (max-width:850px)  {.scaledResume{transform: translateX(-50%) scale(70% , 80%);}}
-    @media screen and (max-width:750px)  {.scaledResume{transform: translateX(-50%) scale(70% , 80%);}    }
-    @media screen and (max-width:610px) {.scaledResume{top:-5%;transform: translateX(-50%) scale(65% , 75%); }}
-    @media screen and (max-width:510px)  {.scaledResume{transform: translateX(-50%) scale(55% , 65%);}}
-    @media screen and (max-width:450px)  {.scaledResume{top:-28vh;transform: translateX(-50%) scale(45% , 65%);}}
-    @media screen and (max-width:360px){ .scaledResume{top:-35vh;transform: translateX(-50%) scale(40% , 50%);}}
-    @media screen and (max-width:314px){.scaledResume{top:-50vh;transform: translateX(-50%) scale(30% , 35%);}}
-    @media screen and (max-width:251px){.scaledResume{top:-57vh;transform: translateX(-50%) scale(25% , 30%);}} 
+    @media screen and (max-width:1200px) {
+        .scaledResume{
+            -ms-transform: translateX(-50%) scale(80% , 90%);
+            -webkit-transform:translateX(-50%) scale(80% , 90%) ;
+            transform: translateX(-50%) scale(80% , 90%);
+        }
+    @media screen and (max-width:850px)  {
+        .scaledResume{
+            -ms-transform:  translateX(-50%) scale(70% , 80%);
+            -webkit-transform: translateX(-50%) scale(70% , 80%) ;
+            transform: translateX(-50%) scale(70% , 80%);
+        }
+    }
+    @media screen and (max-width:750px)  {
+        .scaledResume{
+            -ms-transform:translateX(-50%) scale(70% , 80%) ;
+            -webkit-transform:translateX(-50%) scale(70% , 80%) ;
+            transform: translateX(-50%) scale(70% , 80%);
+        }    
+    }
+    @media screen and (max-width:610px) {
+        .scaledResume{
+            top:-5%;
+            -ms-transform: translateX(-50%) scale(65% , 75%);
+            -webkit-transform:translateX(-50%) scale(65% , 75%) ;
+            transform: translateX(-50%) scale(65% , 75%); 
+        }
+    }
+    @media screen and (max-width:510px)  {
+        .scaledResume{
+            -ms-transform: translateX(-50%) scale(55% , 65%);
+            -webkit-transform: translateX(-50%) scale(55% , 65%);
+            transform: translateX(-50%) scale(55% , 65%);
+        }
+    }
+    @media screen and (max-width:450px)  {
+        .scaledResume{
+            -ms-transform:translateX(-50%) scale(45% , 65%) ;
+            -webkit-transform: translateX(-50%) scale(45% , 65%);
+            top:-28vh;transform: translateX(-50%) scale(45% , 65%);
+        }
+    }
+    @media screen and (max-width:360px){
+         .scaledResume{
+            -ms-transform: translateX(-50%) scale(40% , 50%);;
+            -webkit-transform: translateX(-50%) scale(40% , 50%);;
+            top:-35vh;transform: translateX(-50%) scale(40% , 50%);
+        }
+    }
+    @media screen and (max-width:314px){
+        .scaledResume{
+            top:-50vh;
+            -ms-transform:translateX(-50%) scale(30% , 35%) ;
+            -webkit-transform: translateX(-50%) scale(30% , 35%);
+            transform: translateX(-50%) scale(30% , 35%);
+        }
+    }
+    @media screen and (max-width:251px){
+        .scaledResume{
+            top:-57vh;
+            -ms-transform:translateX(-50%) scale(25% , 30%); ;
+            -webkit-transform: translateX(-50%) scale(25% , 30%);;
+            transform: translateX(-50%) scale(25% , 30%);}
+    }
+    }
+}
 /* scale Wrapper */
     @media screen and (max-width:850px)  {.scaleWrapper{height:180vh;}   }
-    /* @media screen and (max-width:700px)  {.scaleWrapper{height:;}   } */
-    /* @media screen and (max-width:610px) {.scaleWrapper{height:;} } */
-    /* @media screen and (max-width:510px)  {.scaleWrapper{height:;} } */
     @media screen and (max-width:450px)  {.scaleWrapper{height:160vh;} }
     @media screen and (max-width:350px){ .scaleWrapper{height:120vh;} }
     @media screen and (max-width:320px){.scaleWrapper{height:110vh;} }
-    /* @media screen and (max-width:251px){.scaleWrapper{height:;}  }  */
 
- }
+ 
 
- }
 
 
  @-webkit-keyframes fadeInDown {
