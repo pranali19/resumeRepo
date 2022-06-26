@@ -1047,12 +1047,16 @@
 /* scaled Resume */
     @media screen and (max-width:1200px) {
         .scaledResume{
+            -o-transform: translateX(-50%) scale(80% , 90%);
+            -moz-transform:  translateX(-50%) scale(80% , 90%);
             -ms-transform: translateX(-50%) scale(80% , 90%);
             -webkit-transform:translateX(-50%) scale(80% , 90%) ;
             transform: translateX(-50%) scale(80% , 90%);
         }
     @media screen and (max-width:850px)  {
         .scaledResume{
+            -o-transform: translateX(-50%) scale(70% , 80%);
+            -moz-transform:  translateX(-50%) scale(70% , 80%);
             -ms-transform:  translateX(-50%) scale(70% , 80%);
             -webkit-transform: translateX(-50%) scale(70% , 80%) ;
             transform: translateX(-50%) scale(70% , 80%);
@@ -1060,6 +1064,8 @@
     }
     @media screen and (max-width:750px)  {
         .scaledResume{
+            -o-transform: translateX(-50%) scale(70% , 80%) ;
+            -moz-transform: translateX(-50%) scale(70% , 80%) ;
             -ms-transform:translateX(-50%) scale(70% , 80%) ;
             -webkit-transform:translateX(-50%) scale(70% , 80%) ;
             transform: translateX(-50%) scale(70% , 80%);
@@ -1067,6 +1073,8 @@
     }
     @media screen and (max-width:610px) {
         .scaledResume{
+            -o-transform:translateX(-50%) scale(65% , 75%);
+            -moz-transform: translateX(-50%) scale(65% , 75%);
             top:-5%;
             -ms-transform: translateX(-50%) scale(65% , 75%);
             -webkit-transform:translateX(-50%) scale(65% , 75%) ;
@@ -1075,6 +1083,8 @@
     }
     @media screen and (max-width:510px)  {
         .scaledResume{
+            -o-transform:translateX(-50%) scale(55% , 65%);
+            -moz-transform:translateX(-50%) scale(55% , 65%) ;
             -ms-transform: translateX(-50%) scale(55% , 65%);
             -webkit-transform: translateX(-50%) scale(55% , 65%);
             transform: translateX(-50%) scale(55% , 65%);
@@ -1082,6 +1092,8 @@
     }
     @media screen and (max-width:450px)  {
         .scaledResume{
+            -o-transform:translateX(-50%) scale(45% , 65%) ;
+            -moz-transform: translateX(-50%) scale(45% , 65%) ;
             -ms-transform:translateX(-50%) scale(45% , 65%) ;
             -webkit-transform: translateX(-50%) scale(45% , 65%);
             top:-28vh;transform: translateX(-50%) scale(45% , 65%);
@@ -1089,7 +1101,9 @@
     }
     @media screen and (max-width:360px){
          .scaledResume{
-            -ms-transform: translateX(-50%) scale(40% , 50%);;
+            -o-transform: translateX(-50%) scale(40% , 50%);
+            -moz-transform: translateX(-50%) scale(40% , 50%);
+            -ms-transform: translateX(-50%) scale(40% , 50%);
             -webkit-transform: translateX(-50%) scale(40% , 50%);;
             top:-35vh;transform: translateX(-50%) scale(40% , 50%);
         }
@@ -1097,6 +1111,8 @@
     @media screen and (max-width:314px){
         .scaledResume{
             top:-50vh;
+            -o-transform: translateX(-50%) scale(30% , 35%);
+            -moz-transform: translateX(-50%) scale(30% , 35%);
             -ms-transform:translateX(-50%) scale(30% , 35%) ;
             -webkit-transform: translateX(-50%) scale(30% , 35%);
             transform: translateX(-50%) scale(30% , 35%);
@@ -1105,7 +1121,9 @@
     @media screen and (max-width:251px){
         .scaledResume{
             top:-57vh;
-            -ms-transform:translateX(-50%) scale(25% , 30%); ;
+            -o-transform: translateX(-50%) scale(25% , 30%);
+            -moz-transform:translateX(-50%) scale(25% , 30%) ;
+            -ms-transform:translateX(-50%) scale(25% , 30%); 
             -webkit-transform: translateX(-50%) scale(25% , 30%);;
             transform: translateX(-50%) scale(25% , 30%);}
     }

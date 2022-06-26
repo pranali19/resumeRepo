@@ -71,7 +71,7 @@
     .title-h4-rs-three{
         font-family: fangsong;
         font-stretch: expanded;
-        letter-spacing: 0.02rem;
+        letter-spacing: 0.05rem;
         font-size:var(--Title-Font-Size);
     }
     .wrap-for-image-rs-three{
@@ -203,6 +203,7 @@
         font-style: normal;
         list-style: none;
         display: grid;
+        margin-top: 1%;
         grid-template-columns: 6% auto;
         grid-template-rows: 1fr;
        

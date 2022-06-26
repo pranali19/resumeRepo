@@ -34,7 +34,7 @@ export const handleClickPrintPdf=(modal,setIsModal,IsScaled,scaleWrapperRef)=>{
   }
 
     var elem = document.getElementById('resume');
-    var imgfile2 =  html2canvas(elem,{scale:5,dpi:800}).then(canvas=>canvas.toDataURL("img/jpeg",0.3));
+    var imgfile2 =  html2canvas(elem,{scale:3,dpi:300}).then(canvas=>canvas.toDataURL("img/jpeg",0.3));
   if(IsScaled){handleDownloadCss(scaleWrapperRef,orignalHeight,'100%','After')}
 
   imgfile2.then(imgFile=>{

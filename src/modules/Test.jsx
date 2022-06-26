@@ -8,19 +8,14 @@ import ViewCustomize from './Temp3ViewCustomize'
 import store from './components/utils/store';
 import { useSelector } from 'react-redux';
 
-const Transition =(props)=>{
-    const { btnFunction,colorState , setColorThemes}= props.props
+const Transition =({props:{btnFunction, colorState , setColorThemes}})=>{
     const template=useSelector(state=>state.setCurPage)
-
-
-    const selectTempProps = {...btnFunction,head:'Select Your Resume Template'}
-    const fillDetailsProps = {...btnFunction,head:'Fill Your Details'}
-    const viewCustomProps = {...btnFunction }
 
     const fornext ={    
         from:{opacity:0},
         to:{opacity:1},
-        duration:3000}
+        duration:3000
+      }
 
       const styles0 = useSpring(
         template===0?fornext:{opacity:0}
@@ -34,21 +29,27 @@ const Transition =(props)=>{
 
       return(
           <>
-        {template ===  0?
-        <animated.div className='wrap-input-form formOne' style={styles0} name='formOne' data-order>
-        <SelectTemp  props={selectTempProps}  /> </animated.div>:''}
-        {template ===  1?
-        <animated.div className='wrap-input-form formTwo' style={styles1} name='formTwo' data-order>
-        <FillDetails props={fillDetailsProps}  /></animated.div>:''}
-        {template=== 2?
-        <animated.div className='wrap-input-form formThree' style={styles2} name='formThree' data-order>
-        <ColorContext.Provider value={[colorState , setColorThemes]} ><ViewCustomize props={viewCustomProps}  /></ColorContext.Provider> 
-        </animated.div>:''}
+        {template ===  0
+        ? <animated.div className='wrap-input-form formOne' style={styles0} name='formOne' data-order>
+            <SelectTemp  props={{...btnFunction,head:'Select Your Resume Template'}}  /> 
+          </animated.div>
+        :template ===  1
+        ? <animated.div className='wrap-input-form formTwo' style={styles1} name='formTwo' data-order>
+            <FillDetails props={{...btnFunction,head:'Fill Your Details'}}  />
+          </animated.div>
+        :template=== 2
+        ? <animated.div className='wrap-input-form formThree' style={styles2} name='formThree' data-order>
+            <ColorContext.Provider value={[colorState , setColorThemes]} >
+              <ViewCustomize props={{...btnFunction}}  />
+            </ColorContext.Provider> 
+          </animated.div>
+        :''
+        }
         </>
 
       )
 }
-class Test extends React.Component{
+class Wrap extends React.Component{
     constructor(props){
         super(props);        
         this.state = {
@@ -61,9 +62,6 @@ class Test extends React.Component{
 
     useChangeTheme=(val,temp)=>{
       this.setState({...this.state,colorThemes:{...this.state.colorThemes,[temp]:val}})
-    } 
-    componentDidMount(){
-   
     }   
     onClickNewPrev=()=>{
         const newTemp  = store.getState().setCurPage -1
@@ -80,11 +78,10 @@ class Test extends React.Component{
     render(){
         return (      
             <div className='inner-form-main-wrap'>        
-                <Transition props={{btnFunction: this.btnFunction,colorState:this.state.colorThemes,setColorThemes:this.useChangeTheme}}/>
+                <Transition props={{btnFunction: this.btnFunction,colorState:this.state.colorThemes,setColorThemes:this.useChangeTheme}} />
             </div>   
           )
       }
   }
-export default Test;
+export default Wrap;
 
-// Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, voluptates nisi? Expedita quisquam quasi alias excepturi. Dolor nostrum corrupti illum, recusandae dolorum molestiae nisi vel maiores perspiciatis laborum placeat inventore?

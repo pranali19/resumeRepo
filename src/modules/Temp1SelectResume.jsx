@@ -41,7 +41,7 @@ class SelectTemp extends React.Component{
         render(){
             this.head = this.props.props.head
             this.onClickNext = this.props.props.onClickNext
-            this.onClickPrev = this.props.props.onClickPrev
+            // const onClickPrev = this.props.props.onClickPrev
 
 
 
