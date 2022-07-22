@@ -3,6 +3,17 @@
   display: flex;
   flex-direction: column;
 }
+#add-Summary-wrap{
+  flex-direction: column;
+}
+@media screen and (max-width:500px){
+  textarea  {
+      height:60% !important;
+      width:auto !important;
+  }
+  
+
+}
 #resume {
   height: 11.675in !important;
   width: 8.265in !important;

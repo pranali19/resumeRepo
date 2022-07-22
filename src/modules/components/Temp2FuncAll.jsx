@@ -313,10 +313,10 @@ const GetInputReturn=(props)=>{
         <div className="per-detail-grid-wrap">
         {inpArray.map((i,indx)=>{
             if(i.name=='Summary'){
-                return inpArray.length > 2? <EditorRecordComp key={i.name+String(indx)} props={[i,indx,false,editorState,setEditorState]} />:<div className='form-group form-group-nb' key={i.name+String(indx)}><label className='label-nb'><p name={i.name} className='label-para-class'>{i.label} </p><textarea style={{height:'10vh',width:'20vw'}} name={i.name} className="inp-class-fd form-control"></textarea></label></div> 
+                return inpArray.length > 2? <EditorRecordComp key={i.name+String(indx)} props={[i,indx,false,editorState,setEditorState]} />:<div className='form-group form-group-nb' key={i.name+String(indx)}><label className='label-nb'><p name={i.name} className='label-para-class'>{i.label} </p><textarea style={{height:'10vh',width:'20vw'}} name={i.name} className="inp-class-fd form-control summary-class"></textarea></label></div> 
             }
             if(i.name == 'Skill Level'){
-                return <div style={{display:'flex',flexDirection:'column'}} className='form-group form-group-nb' key={i.name+String(indx)}><label className='label-nb'><p className='label-para-class'>{i.label} </p><input className="inp-class-fd form-control" defaultValue={''} name={i.name} type={i.type}></input></label> <small style={{width:'90%',marginLeft:'2%'}}id='kill-help-block' className='form-text text-muted'>level feild must contain a value lesser than or equal to 10 </small></div>
+                return <div style={{display:'flex',flexDirection:'column'}} className='form-group form-group-nb' key={i.name+String(indx)}><label className='label-nb'><p className='label-para-class'>{i.label} </p><input className="inp-class-fd form-control" defaultValue={''} name={i.name} type={i.type}></input></label> <small style={{width:'90%',marginLeft:'2%'}} id='kill-help-block' className='form-text text-muted'>level feild must contain a value lesser than or equal to 10 </small></div>
             }
             return  <div className='form-group form-group-nb' key={i.name+String(indx)}><label className='label-nb'><p className='label-para-class'>{i.label} </p><input  className="inp-class-fd form-control" defaultValue={''} name={i.name} type={i.type}></input></label></div> 
         })}
