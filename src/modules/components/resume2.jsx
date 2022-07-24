@@ -245,7 +245,7 @@ export const CustomSection=(props)=>{
         colorChange({target:{
             value:colorThemes[temp]
         }})
-    })
+    },[])
     return (
         <div id='resume' class="resume-border-rs-two">
             <div class="resume-inner-wrap-rs-two grid-gap-id">

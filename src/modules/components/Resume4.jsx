@@ -249,7 +249,7 @@ const Res4=()=>{
         colorChange({target:{
             value:colorThemes[temp]
         }})
-    })
+    },[])
 
     return(
         <div id='resume' className="resume-border-rs-four">

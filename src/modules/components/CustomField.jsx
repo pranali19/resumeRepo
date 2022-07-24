@@ -599,6 +599,7 @@ export const SingleButtonReturn=(props)=>{
     const dispatch = useDispatch()
     const temp=useSelector(state=>state.setTemp.template)
     const colorTheme  = {res1: '#021f1f', res2: 'rgb(69, 6, 69)', res3:'#ddd9cc',res4:'rgb(146, 128, 81)'}
+    console.log(colorTheme[temp] )
 
     const handleRestore =()=>{
         colorChange({target:{value:colorTheme[temp]}})

@@ -25,6 +25,7 @@ export const addAdditionalField = (e, dataCl) => {
 }
 
 export const colorChange = (e) => {
+    
     const resumeElem = document.querySelector('#resumeWrapId')
     const allHead = [...resumeElem.querySelectorAll('.cl-theme')]
     allHead.map(i => {
@@ -33,7 +34,8 @@ export const colorChange = (e) => {
                 i.style.borderColor = e.target.value
             }
             else{
-            i.style.backgroundColor = e.target.value
+                console.log(i,e.target.value)
+            i.style.backgroundColor = e.target.value 
             if (i.classList.contains('trackForChangeColor')){
                 changeHeadingForBg(i,e.target.value)
             }

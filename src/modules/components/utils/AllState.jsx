@@ -97,8 +97,7 @@ const res4Orignal ={
     },
     MinorHeading:{fontSize:"1rem"},
     MinorSubHeading:{fontSize:"0.9rem"},
-    color:'',
-    AddSubHeading:'Open Sans',
+
     
 }
 export const resumeStyleState = {

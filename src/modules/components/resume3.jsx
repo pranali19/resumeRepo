@@ -259,7 +259,7 @@ const Res3=()=>{
         colorChange({target:{
             value:colorThemes[temp]
         }})
-    })
+    },[])
 
     return(
         <div id='resume' className="resume-border-rs-three add-on-resume-border-rs-one">

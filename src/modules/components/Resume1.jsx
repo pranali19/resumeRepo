@@ -128,7 +128,7 @@ const Res1=()=>{
         colorChange({target:{
             value:colorThemes[temp]
         }})
-    }) 
+    },[]) 
     return(
         <div className="resume-border-rs-one" id='resume'>
         <div className="resume-inner-wrap-rs-one grid-gap-id">
